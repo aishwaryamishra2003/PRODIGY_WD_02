@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    background-image: url(images/stopwatch.jpeg);
+    background-size: cover;
+}
+
+.container{
+    width: 40%;
+    min-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #27373b;
+    padding-bottom: 50px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0,0.3) 0px 7px 13px -3px,rgba(0,0,0,0.2) 0px -3px 0px inset;
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    0% {
+        box-shadow: 0 0 10px #ffc107, 0 0 20px #ffc107, 0 0 30px #ffc107, 0 0 40px #ffc107;
+    }
+    50% {
+        box-shadow: 0 0 10px #ff7b07, 0 0 20px #ff7b07, 0 0 30px #ff7b07, 0 0 40px #ff7b07;
+    }
+    100% {
+        box-shadow: 0 0 10px #ffc107, 0 0 20px #ffc107, 0 0 30px #ffc107, 0 0 40px #ffc107;
+    }
+}
+
+.timer-display{
+    background: rgb(163, 159, 159);
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    border-radius: 10px 10px 0 0;
+}
+
+.laps{
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.laps h4{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.action{
+    width: 85%;
+    margin: 60px auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.action button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid black;
+    outline: none;
+    cursor: pointer;
+    transition: .4s linear;
+}
+
+.action button:hover{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
